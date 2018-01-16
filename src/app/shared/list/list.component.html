@@ -1,0 +1,6 @@
+<ul>
+    <li [attr.id]="i" *ngFor="let product of products; index as i">
+        {{product.id}} - {{product.description}}
+    </li>
+</ul>
+<button (click)="emitReverse()">Revertir</button>
