@@ -8,6 +8,7 @@ import { LabelPipe } from './shared/label/label.pipe';
 import { LoginModule } from './login/login.module';
 import { AppRoutingModule } from './app-routing.module';
 import { AuthService } from './shared/auth/auth.service';
+import { ProductModule } from './product/product.module';
 
 
 @NgModule({
@@ -18,7 +19,8 @@ import { AuthService } from './shared/auth/auth.service';
     BrowserModule,
     SharedModule,
     LoginModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ProductModule
   ],
   providers: [AuthService],
   bootstrap: [AppComponent]
