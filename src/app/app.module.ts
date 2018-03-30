@@ -5,6 +5,9 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { SharedModule } from './shared/shared.module';
 import { LabelPipe } from './shared/label/label.pipe';
+import { LoginModule } from './login/login.module';
+import { AppRoutingModule } from './app-routing.module';
+import { AuthService } from './shared/auth/auth.service';
 
 
 @NgModule({
@@ -13,9 +16,11 @@ import { LabelPipe } from './shared/label/label.pipe';
   ],
   imports: [
     BrowserModule,
-    SharedModule
+    SharedModule,
+    LoginModule,
+    AppRoutingModule
   ],
-  providers: [],
+  providers: [AuthService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
