@@ -1,8 +1,0 @@
-<div class="container">
-    <ul class="list-group">
-        <li class="list-group-item" [attr.id]="i" *ngFor="let product of products; index as i">
-            {{product.id | label:"Product"}} - {{product.description}}
-        </li>
-    </ul>
-    <button (click)="emitReverse()" type="button" class="btn btn-primary">Revertir</button>
-</div>
