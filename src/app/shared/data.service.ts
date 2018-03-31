@@ -20,7 +20,7 @@ export class DataService<T> {
     }
 
     get(target: string, id: number): Observable<T> {
-        const url = `${this.base}/${id}`;
+        const url = `${this.base}${target}/${id}`;
         return this.http.get<T>(url)
             .catch(this.handleError);
     }
@@ -36,7 +36,7 @@ export class DataService<T> {
     }
 
     delete(target: string, id: number): Observable<void> {
-        const url = `${this.base}/${id}`;
+        const url = `${this.base}${target}/${id}`;
         return this.http.delete(url)
             .catch(this.handleError);
     }
