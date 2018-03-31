@@ -9,6 +9,7 @@ import { LoginModule } from './login/login.module';
 import { AppRoutingModule } from './app-routing.module';
 import { AuthService } from './shared/auth/auth.service';
 import { ProductModule } from './product/product.module';
+import { HttpClientModule } from '@angular/common/http';
 
 
 @NgModule({
@@ -17,6 +18,7 @@ import { ProductModule } from './product/product.module';
   ],
   imports: [
     BrowserModule,
+    HttpClientModule,
     SharedModule,
     LoginModule,
     AppRoutingModule,
