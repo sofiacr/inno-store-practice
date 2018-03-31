@@ -22,9 +22,9 @@ import { ShopModule } from './shop/shop.module';
     HttpClientModule,
     SharedModule,
     LoginModule,
-    AppRoutingModule,
     ProductModule,
-    ShopModule
+    ShopModule,
+    AppRoutingModule,
   ],
   providers: [AuthService],
   bootstrap: [AppComponent]
