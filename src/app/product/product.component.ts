@@ -1,7 +1,5 @@
 import { Component } from '@angular/core';
-import { Product } from './product';
 import { OnInit } from '@angular/core';
-import { DataService } from '../shared/data.service';
 
 @Component({
     selector: 'app-product',
@@ -10,15 +8,8 @@ import { DataService } from '../shared/data.service';
 })
 export class ProductComponent implements OnInit {
 
-    private static TARGET = 'product';
-    public products: Product[];
-
-    constructor(
-        private dataService: DataService<Product>
-    ) {}
+    constructor() {}
 
     ngOnInit(): void {
-        this.dataService.list(ProductComponent.TARGET)
-            .subscribe(products => this.products = products);
     }
 }
