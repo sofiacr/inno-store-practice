@@ -10,7 +10,7 @@ const cudOptions = { headers: new HttpHeaders({ 'Content-Type': 'application/jso
 @Injectable()
 export class DataService<T> {
 
-    private base = '/curso-angular-api/api/';
+    private base = 'http://localhost:8080/curso-angular-api/api/';
 
     constructor(private http: HttpClient) {}
 
