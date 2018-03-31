@@ -10,6 +10,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AuthService } from './shared/auth/auth.service';
 import { ProductModule } from './product/product.module';
 import { HttpClientModule } from '@angular/common/http';
+import { ShopModule } from './shop/shop.module';
 
 
 @NgModule({
@@ -22,7 +23,8 @@ import { HttpClientModule } from '@angular/common/http';
     SharedModule,
     LoginModule,
     AppRoutingModule,
-    ProductModule
+    ProductModule,
+    ShopModule
   ],
   providers: [AuthService],
   bootstrap: [AppComponent]

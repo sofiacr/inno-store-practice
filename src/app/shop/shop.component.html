@@ -1,0 +1,16 @@
+<div class="col-md-12">
+        <h2>Shops</h2>
+        <table class="table">
+            <thead>
+                <th>Description</th>
+                <th>City</th>
+            </thead>
+            <tbody *ngIf="shops">
+                <tr *ngFor="let shop of shops">
+                    <td>{{ shop.description }}</td>
+                    <td>{{ shop.city }}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    
