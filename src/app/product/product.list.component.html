@@ -1,0 +1,21 @@
+<div class="col-md-12">
+    <h2>Products list</h2>
+    <table class="table">
+        <thead>
+            <th>Description</th>
+            <th>Type</th>
+            <th>Price</th>
+            <th>Actions</th>
+        </thead>
+        <tbody *ngIf="products">
+            <tr *ngFor="let product of products">
+                <td>{{ product.description }}</td>
+                <td>{{ product.type }}</td>
+                <td>{{ product.price | currency:'EUR':'symbol' }} </td>
+                <td>
+                    <a [routerLink]="['/product', product.id]" class="btn btn-xs btn-info">Details</a>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
