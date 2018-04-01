@@ -11,6 +11,7 @@ import { AuthService } from './shared/auth/auth.service';
 import { ProductModule } from './product/product.module';
 import { HttpClientModule } from '@angular/common/http';
 import { ShopModule } from './shop/shop.module';
+import { AuthGuard } from './auth-guard.service';
 
 
 @NgModule({
@@ -26,7 +27,7 @@ import { ShopModule } from './shop/shop.module';
     ShopModule,
     AppRoutingModule,
   ],
-  providers: [AuthService],
+  providers: [AuthService, AuthGuard ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
