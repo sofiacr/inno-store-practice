@@ -1,0 +1,16 @@
+<table class="table">
+    <thead>
+        <th>Description</th>
+        <th>City</th>
+        <th>Actions</th>
+    </thead>
+    <tbody *ngIf="shops">
+        <tr *ngFor="let shop of shops">
+            <td>{{ shop.description }}</td>
+            <td>{{ shop.city }}</td>
+            <td>
+                <a [routerLink]="['/shops', shop.id]" class="btn btn-xs btn-info">Details</a>
+            </td>
+        </tr>
+    </tbody>
+</table>
