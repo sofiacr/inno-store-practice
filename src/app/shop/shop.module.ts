@@ -5,9 +5,10 @@ import { ShopService } from './shop.service';
 import { ShopListComponent } from './shop.list.component';
 import { ShopRoutingModule } from './shop-routing.module';
 import { ShopDetailComponent } from './shop.detail.component';
+import { SharedModule } from '../shared/shared.module';
 
 @NgModule({
-    imports: [ CommonModule, ShopRoutingModule ],
+    imports: [ CommonModule, ShopRoutingModule, SharedModule ],
     declarations: [ ShopComponent, ShopListComponent, ShopDetailComponent ],
     exports: [ ShopComponent ],
     providers: [ ShopService ]
