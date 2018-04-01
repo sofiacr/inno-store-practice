@@ -1,16 +1,7 @@
-<div class="col-md-12">
-        <h2>Shops</h2>
-        <table class="table">
-            <thead>
-                <th>Description</th>
-                <th>City</th>
-            </thead>
-            <tbody *ngIf="shops">
-                <tr *ngFor="let shop of shops">
-                    <td>{{ shop.description }}</td>
-                    <td>{{ shop.city }}</td>
-                </tr>
-            </tbody>
-        </table>
+<div class="card bg-light mb-3">
+        <div class="card-header"><h4 style="font-weight: bold">Shops</h4></div>
+        <div class="card-body">
+            <router-outlet></router-outlet>
+        </div>
     </div>
     
