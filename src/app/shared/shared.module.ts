@@ -5,11 +5,13 @@ import { FormsModule } from '@angular/forms';
 import { DataService } from './data.service';
 import { LabelPipe } from './label/label.pipe';
 import { NotFoundComponent } from './not-found/not.found.component';
+import { NavsComponent } from './navs/navs.component';
+import { RouterModule } from '@angular/router';
 
 @NgModule({
-    declarations: [ HeaderComponent, LabelPipe, NotFoundComponent ],
-    imports: [ CommonModule, FormsModule ],
-    exports: [ HeaderComponent, CommonModule, FormsModule, NotFoundComponent ],
+    declarations: [ HeaderComponent, LabelPipe, NotFoundComponent, NavsComponent ],
+    imports: [ CommonModule, FormsModule, RouterModule ],
+    exports: [ HeaderComponent, CommonModule, FormsModule, NotFoundComponent, NavsComponent ],
     providers: [ DataService ]
 })
 export class SharedModule {}
