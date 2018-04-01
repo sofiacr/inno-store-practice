@@ -1,3 +1,4 @@
 <div class="col-md-12">
-    <button (click)="login()" class="btn btn-xs btn-info">Login</button>
+    <button (click)="login()" class="btn btn-xs btn-info" *ngIf="!isLoggedIn()">Login</button>
+    <button (click)="logout()" class="btn btn-xs btn-info" *ngIf="isLoggedIn()">Logout</button>
 </div>

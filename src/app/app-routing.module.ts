@@ -5,8 +5,7 @@ import { ShopComponent } from './shop/shop.component';
 import { NotFoundComponent } from './shared/not-found/not.found.component';
 
 const routes: Routes = [
-  { path: '', redirectTo: '/products', pathMatch: 'full' },
-  // { path: '', redirectTo: '/login', pathMatch: 'full' },
+  { path: '', redirectTo: '/login', pathMatch: 'full' },
   { path: 'login', component: LoginComponent },
   { path: '**', component: NotFoundComponent }
 ];

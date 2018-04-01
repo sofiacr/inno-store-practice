@@ -17,5 +17,17 @@ export class LoginComponent {
 
   login() {
     this.authService.login();
+    console.log('logged in');
+    this.router.navigate(['/products']);
+  }
+
+  logout() {
+    this.authService.logout();
+    console.log('logged out');
+    this.router.navigate(['/login']);
+  }
+
+  isLoggedIn(): boolean {
+    return this.authService.checkLogged();
   }
 }
