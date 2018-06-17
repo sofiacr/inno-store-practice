@@ -13,6 +13,7 @@ import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { ShopModule } from './shop/shop.module';
 import { AuthGuard } from './auth-guard.service';
 import { HttpHeaderInterceptor } from './shared/inerceptor/http-header-interceptor';
+import { FormBuilder } from '@angular/forms';
 
 
 @NgModule({
@@ -28,7 +29,12 @@ import { HttpHeaderInterceptor } from './shared/inerceptor/http-header-intercept
     ShopModule,
     AppRoutingModule,
   ],
-  providers: [AuthService, AuthGuard, { provide: HTTP_INTERCEPTORS, useClass: HttpHeaderInterceptor, multi: true } ],
+  providers: [
+    AuthService, 
+    AuthGuard, 
+    { provide: HTTP_INTERCEPTORS, useClass: HttpHeaderInterceptor, multi: true },
+    FormBuilder
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
