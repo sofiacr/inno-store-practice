@@ -18,4 +18,8 @@ export class ProductService {
     get(id: number | string): Observable<Product> {
         return this.dataService.get(this.target, +id);
     }
+  
+    save(product: Product): Observable<number> {
+      return this.dataService.add(this.target, product);
+    }
 }
