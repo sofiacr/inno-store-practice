@@ -1,3 +1,27 @@
-<p>
-  add-product works!
-</p>
+<form [formGroup]="productForm" (ngSubmit)="onSubmit()">
+	<div class="form-group">
+	
+		<label class="center-block">Descripción:
+			<input class="form-control" formControlName="description">
+		</label>
+	</div>
+	<div class="form-group">
+		<label class="center-block">Precio:
+			<input class="form-control" formControlName="price">
+		</label>
+	</div>
+	<div class="form-group">
+		<label class="center-block">Tipo:
+			<select class="form-control" formControlName="idType">
+				<option *ngFor="let type of types" [value]="type.id">{{ type.description }}</option>
+			</select>
+		</label>
+	</div>
+	<div style="margin-bottom: 1em">
+		<button
+			type="submit"
+			[disabled]="productForm.pristine"
+			class="btn btn-success"
+		>Guardar</button>
+	</div>
+</form>
