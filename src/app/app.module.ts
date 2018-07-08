@@ -13,7 +13,7 @@ import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { ShopModule } from './shop/shop.module';
 import { AuthGuard } from './auth-guard.service';
 import { HttpHeaderInterceptor } from './shared/inerceptor/http-header-interceptor';
-import { FormBuilder } from '@angular/forms';
+import { FormBuilder, ReactiveFormsModule, FormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -23,11 +23,13 @@ import { FormBuilder } from '@angular/forms';
   imports: [
     BrowserModule,
     HttpClientModule,
+    FormsModule,
+    ReactiveFormsModule,
     SharedModule,
     LoginModule,
     ProductModule,
     ShopModule,
-    AppRoutingModule,
+    AppRoutingModule
   ],
   providers: [
     AuthService, 
