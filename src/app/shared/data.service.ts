@@ -25,7 +25,7 @@ export class DataService<T> {
             .catch(this.handleError);
     }
 
-    add(target: string, object: T): Observable<T> {
+    add(target: string, object: T): Observable<number> {
         return this.http.post(this.base + target, object, cudOptions)
             .catch(this.handleError);
     }
